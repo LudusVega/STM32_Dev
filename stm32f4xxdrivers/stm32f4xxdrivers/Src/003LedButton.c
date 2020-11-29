@@ -1,0 +1,55 @@
+/*
+ * 002LedButton.c
+ *
+ *  Created on: Nov 14, 2020
+ *      Author: JSnyder
+ */
+
+#include "stm32f407xx.h"
+#define HIGH	1
+#define BTN_PRESSED  HIGH
+
+void delay1(void)
+{
+	for(uint32_t i=0; i < 500000/2; i ++);
+}
+
+int main(void)
+{
+	GPIO_Handle_t GpioLed1, GpioBtn1;
+
+	;
+	GpioLed1.pGPIOx = GPIOD;
+	GpioLed1.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_14;
+	GpioLed1.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_OUT;
+	GpioLed1.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
+	GpioLed1.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
+	GpioLed1.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
+
+	GPIO_PeriClockControl(GPIOD, ENABLE);
+
+	GPIO_Init(&GpioLed1);
+
+	GpioBtn1.pGPIOx = GPIOA;
+	GpioBtn1.GPIO_PinConfig.GPIO_PinNumber = GPIO_PIN_NO_0;
+	GpioBtn1.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_IN;
+	GpioBtn1.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
+	GpioBtn1.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_NO_PUPD;
+
+	GPIO_PeriClockControl(GPIOA, ENABLE);
+
+	GPIO_Init(&GpioBtn1);
+
+
+	while(1)
+	{
+
+		if(GPIO_ReadFromInputPin(GPIOA, GPIO_PIN_NO_0) == BTN_PRESSED)
+		{
+			delay1();
+			GPIO_ToggleOutputPin(GPIOD, GPIO_PIN_NO_14);
+		}
+	}
+
+	return 0;
+}

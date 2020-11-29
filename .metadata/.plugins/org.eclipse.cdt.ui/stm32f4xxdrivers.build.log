@@ -1,0 +1,205 @@
+12:12:43 **** Incremental Build of configuration Debug for project stm32f4xxdrivers ****
+make -j4 all 
+arm-none-eabi-gcc "../drivers/src/stm32f407xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I"C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc" -I"C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/src" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"drivers/src/stm32f407xx_gpio_driver.d" -MT"drivers/src/stm32f407xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f407xx_gpio_driver.o"
+arm-none-eabi-gcc "../Src/003LedButtonExt.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -DDEBUG -c -I"C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc" -I"C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/src" -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/003LedButtonExt.d" -MT"Src/003LedButtonExt.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/003LedButtonExt.o"
+In file included from C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f4xx_gpio_driver.h:11:0,
+                 from ../drivers/src/stm32f407xx_gpio_driver.c:8:
+../drivers/src/stm32f407xx_gpio_driver.c: In function 'GPIO_Init':
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:143:3: note: in expansion of macro 'EXTI'
+   EXTI ->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: note: (near initialization for '(anonymous)')
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:143:3: note: in expansion of macro 'EXTI'
+   EXTI ->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:145:3: note: in expansion of macro 'EXTI'
+   EXTI ->RTSR &= ~( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: note: (near initialization for '(anonymous)')
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:145:3: note: in expansion of macro 'EXTI'
+   EXTI ->RTSR &= ~( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:150:3: note: in expansion of macro 'EXTI'
+   EXTI ->RTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: note: (near initialization for '(anonymous)')
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:150:3: note: in expansion of macro 'EXTI'
+   EXTI ->RTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:152:3: note: in expansion of macro 'EXTI'
+   EXTI ->FTSR &= ~( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: note: (near initialization for '(anonymous)')
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:152:3: note: in expansion of macro 'EXTI'
+   EXTI ->FTSR &= ~( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:157:3: note: in expansion of macro 'EXTI'
+   EXTI ->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: note: (near initialization for '(anonymous)')
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:157:3: note: in expansion of macro 'EXTI'
+   EXTI ->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:159:3: note: in expansion of macro 'EXTI'
+   EXTI ->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: note: (near initialization for '(anonymous)')
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:159:3: note: in expansion of macro 'EXTI'
+   EXTI ->FTSR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber );
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:167:3: note: in expansion of macro 'EXTI'
+   EXTI ->IMR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+   ^~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:30:27: note: (near initialization for '(anonymous)')
+ #define APB2PERIPH_BASE   0x40010000U
+                           ^
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:107:26: note: in expansion of macro 'APB2PERIPH_BASE'
+ #define EXTI_BASEADDR   {APB2PERIPH_BASE + 0x3C00}
+                          ^~~~~~~~~~~~~~~
+C:/Users/jsnyd/STM32CubeIDE/workspace_1.4.0/stm32f4xxdrivers/stm32f4xxdrivers/drivers/inc/stm32f407xx.h:209:35: note: in expansion of macro 'EXTI_BASEADDR'
+ #define EXTI     ((EXTI_RegDef_t*)EXTI_BASEADDR)
+                                   ^~~~~~~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:167:3: note: in expansion of macro 'EXTI'
+   EXTI ->IMR |= ( 1 << pGPIOHandle->GPIO_PinConfig.GPIO_PinNumber);
+   ^~~~
+../drivers/src/stm32f407xx_gpio_driver.c:165:11: warning: unused variable 'portcode' [-Wunused-variable]
+   uint8_t portcode = GPIO_BASEADDR_TO_CODE(pGPIOHandle ->pGPIOx);
+           ^~~~~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:164:11: warning: unused variable 'temp3' [-Wunused-variable]
+   uint8_t temp3 = pGPIOHandle ->GPIO_PinConfig.GPIO_PinNumber % 4;
+           ^~~~~
+../drivers/src/stm32f407xx_gpio_driver.c:163:11: warning: unused variable 'temp2' [-Wunused-variable]
+   uint8_t temp2 = pGPIOHandle ->GPIO_PinConfig.GPIO_PinNumber / 4;
+           ^~~~~
+../drivers/src/stm32f407xx_gpio_driver.c: In function 'GPIO_WriteToOutputPin':
+../drivers/src/stm32f407xx_gpio_driver.c:287:16: warning: value computed is not used [-Wunused-value]
+   pGPIOx ->ODR |+ (1 << PinNumber);
+   ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "stm32f4xxdrivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\jsnyd\STM32CubeIDE\workspace_1.4.0\stm32f4xxdrivers\stm32f4xxdrivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f4xxdrivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f4xxdrivers.elf
+ 
+arm-none-eabi-size   stm32f4xxdrivers.elf 
+arm-none-eabi-objdump -h -S  stm32f4xxdrivers.elf  > "stm32f4xxdrivers.list"
+arm-none-eabi-objcopy  -O binary  stm32f4xxdrivers.elf  "stm32f4xxdrivers.bin"
+   text	   data	    bss	    dec	    hex	filename
+   2088	      8	   1568	   3664	    e50	stm32f4xxdrivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f4xxdrivers.list
+Finished building: stm32f4xxdrivers.bin
+ 
+ 
+
+12:12:44 Build Finished. 0 errors, 11 warnings. (took 1s.132ms)
+
